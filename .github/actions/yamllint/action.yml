@@ -5,7 +5,7 @@ description:
 runs:
   using: 'composite'
   steps:
-    - run: pip install gitlint
+    - run: pip install yamllint
       shell: bash
-    - run: ./scripts/gitlint.sh
+    - run: ./scripts/yamllint.sh
       shell: bash
