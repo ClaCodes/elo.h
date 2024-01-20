@@ -1,0 +1,10 @@
+on: [push]
+
+jobs:
+  dummy:
+    runs-on: ubuntu-latest
+    name: dummy
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 #fetch everything
