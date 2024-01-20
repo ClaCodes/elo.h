@@ -1,10 +1,10 @@
 on: [push]
 
 jobs:
-  dummy:
+  gitlint:
     runs-on: ubuntu-latest
-    name: dummy
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0 #fetch everything
+      - uses: ./.github/actions/gitlint
