@@ -1,7 +1,7 @@
 ---
-name: 'gitlint'
+name: 'yamllint'
 description:
-  'Lints the commit messages of the branch that is currently checked out'
+  'Lints all yaml files in repo'
 runs:
   using: 'composite'
   steps:
