@@ -1,0 +1,11 @@
+---
+name: 'shellcheck'
+description:
+  'Chechs all shellscripts in repo'
+runs:
+  using: 'composite'
+  steps:
+    - run: sudo apt-get install shellcheck -y
+      shell: bash
+    - run: ./scripts/shellcheck.sh
+      shell: bash
