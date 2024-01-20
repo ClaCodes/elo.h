@@ -1,0 +1,12 @@
+on: [push]
+
+jobs:
+  gitlint:
+    runs-on: ubuntu-latest
+    name: Lint git commit message of branch
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 #fetch everything
+      - uses: ./.github/actions/gitlint
+      -
