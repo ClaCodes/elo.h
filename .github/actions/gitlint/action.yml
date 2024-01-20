@@ -1,0 +1,10 @@
+name: 'gitlint'
+description: 'Lints the commit messages of the branch that is currently checked out'
+runs:
+  using: 'composite'
+  steps:
+    - run: pip install gitlint
+      shell: bash
+    - run: ./scripts/gitlint.sh
+      shell: bash
+
