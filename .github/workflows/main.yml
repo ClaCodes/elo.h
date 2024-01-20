@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # fetch everything
+          fetch-depth: 0 # fetch everything
       - id: gitlint-step
         uses: ./.github/actions/gitlint
       - run: >
