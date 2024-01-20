@@ -7,7 +7,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0  # fetch everything
+          fetch-depth: 0 # fetch everything
       - uses: ./.github/actions/gitlint
   yamllint:
     runs-on: ubuntu-latest
