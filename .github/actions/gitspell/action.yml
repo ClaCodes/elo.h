@@ -1,0 +1,18 @@
+---
+name: 'gitspell'
+description:
+  'Checks spelling of all commit messages'
+outputs:
+  diagnostic:
+    description: 'Diagnostic text for gitspell'
+    value: ${{ steps.gitspell-step.outputs.diagnostic }}
+runs:
+  using: 'composite'
+  steps:
+    - run: sudo npm install -g cspell@latest
+      shell: bash
+    - id: gitspell-step
+      run: >
+        ./scripts/out_wrapper.sh ./scripts/gitspell.sh diagnostic
+        &> $GITHUB_OUTPUT
+      shell: bash
