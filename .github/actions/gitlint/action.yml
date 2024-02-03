@@ -2,10 +2,17 @@
 name: 'gitlint'
 description:
   'Lints the commit messages of the branch that is currently checked out'
+outputs:
+  diagnostic:
+    description: 'Diagnostic text for gitlint'
+    value: ${{ steps.gitlint-step.outputs.diagnostic }}
 runs:
   using: 'composite'
   steps:
     - run: pip install gitlint
       shell: bash
-    - run: ./scripts/gitlint.sh
+    - id: gitlint-step
+      run: >
+        ./scripts/out_wrapper.sh ./scripts/gitlint.sh diagnostic
+        &> $GITHUB_OUTPUT
       shell: bash
