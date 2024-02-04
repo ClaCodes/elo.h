@@ -7,5 +7,7 @@ runs:
   steps:
     - run: sudo apt-get install shellcheck -y
       shell: bash
-    - run: ./scripts/shellcheck.sh
+    - run: echo "::add-matcher::.github/matchers/shellcheck.json"
+      shell: bash
+    - run: ./scripts/shellcheck.sh -f gcc
       shell: bash
