@@ -4,11 +4,11 @@
             "owner": "gcc",
             "pattern": [
                 {
-                    "regexp": "^(.+):(\\d+):(\\d+):\\s(.+)$",
+                    "regexp": "^(.+);;(.+) at line (\\d+), column (\\d+)$",
                     "file": 1,
-                    "line": 2,
-                    "column": 3,
-                    "message": 4
+                    "message": 2,
+                    "line": 3,
+                    "column": 4
                 }
             ]
         }
