@@ -1,7 +1,7 @@
 {
   "problemMatcher": [
     {
-      "owner": "shellcheck",
+      owner: "shellcheck",
       "pattern": [
         {
           "regexp": "^(.+):(\\d+):(\\d+):\\s(.+)$",
