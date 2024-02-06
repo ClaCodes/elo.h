@@ -1,0 +1,13 @@
+---
+name: 'jq_format'
+description:
+  'Checks formatting of .json files with jq'
+runs:
+  using: 'composite'
+  steps:
+    - run: sudo apt-get install jq -y
+      shell: bash
+    - run: echo "::add-matcher::.github/matchers/jq_format.json"
+      shell: bash
+    - run: ./scripts/jq_format.sh
+      shell: bash
