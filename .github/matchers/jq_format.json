@@ -1,0 +1,14 @@
+{
+  "problemMatcher": [
+    {
+      "owner": "jq_format",
+      "pattern": [
+        {
+          "regexp": "^(.+);;(.+)$",
+          "file": 1,
+          "message": 2
+        }
+      ]
+    }
+  ]
+}
