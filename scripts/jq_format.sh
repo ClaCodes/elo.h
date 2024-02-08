@@ -6,13 +6,13 @@ for FILE in $FILES; do
     then
         if ! diff --unified "$FILE" "$FILE.temp" > "$FILE.diff"; then
             EXIT_CODE=1
-        fi
-        if [ "$1" == "--diff" ]; then
-             cat "$FILE.diff"
-        elif [ "$1" == "--apply" ]; then
-            cp "$FILE.temp" "$FILE"
-        else
-            printf "%s;; \`jq\` would format this file. Use \`./scripts/jq_format.sh --diff\` to see the changes it would make and \`./scripts/jq_format.sh --apply\` to aply them.\n" "$FILE"
+            if [ "$1" == "--diff" ]; then
+                 cat "$FILE.diff"
+            elif [ "$1" == "--apply" ]; then
+                cp "$FILE.temp" "$FILE"
+            else
+                printf "%s;; \`jq\` would format this file. Use \`./scripts/jq_format.sh --diff\` to see the changes it would make and \`./scripts/jq_format.sh --apply\` to aply them.\n" "$FILE"
+            fi
         fi
         rm "$FILE.diff"
     fi
