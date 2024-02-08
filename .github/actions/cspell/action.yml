@@ -1,0 +1,13 @@
+---
+name: 'cspell'
+description:
+  'Checks spelling of all files in repo'
+runs:
+  using: 'composite'
+  steps:
+    - run: sudo npm install -g cspell@latest
+      shell: bash
+    - run: echo "::add-matcher::.github/matchers/cspell.json"
+      shell: bash
+    - run: ./scripts/cspell.sh
+      shell: bash
