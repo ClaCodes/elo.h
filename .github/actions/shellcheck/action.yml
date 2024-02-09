@@ -1,6 +1,6 @@
 ---
 name: shellcheck
-description: Checks all shell scripts in repo
+description: Checks all shellscripts in repo
 runs:
   using: composite
   steps:
