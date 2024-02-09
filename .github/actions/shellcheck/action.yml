@@ -1,7 +1,7 @@
 ---
 name: 'shellcheck'
 description:
-  'Chechs all shellscripts in repo'
+  'Checks all shell scripts in repo'
 runs:
   using: 'composite'
   steps:

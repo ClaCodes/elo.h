@@ -11,7 +11,7 @@ for FILE in $FILES; do
             elif [ "$1" == "--apply" ]; then
                 cp "$FILE.temp" "$FILE"
             else
-                printf "%s;; \`jq\` would format this file. Use \`./scripts/jq_format.sh --diff\` to see the changes it would make and \`./scripts/jq_format.sh --apply\` to aply them.\n" "$FILE"
+                printf "%s;; \`jq\` would format this file. Use \`./scripts/jq_format.sh --diff\` to see the changes it would make and \`./scripts/jq_format.sh --apply\` to apply them.\n" "$FILE"
             fi
         fi
         rm "$FILE.diff"

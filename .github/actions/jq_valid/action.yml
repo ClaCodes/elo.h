@@ -1,7 +1,7 @@
 ---
 name: 'jq_valid'
 description:
-  'Checks valididty of .json files with jq'
+  'Checks validity of .json files with jq'
 runs:
   using: 'composite'
   steps:
