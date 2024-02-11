@@ -2,12 +2,11 @@
 EXIT_CODE=0
 FILES=$(find . -name "*.json")
 for FILE in $FILES; do
-    if jq . "$FILE" >"$FILE.temp" 2> "$FILE.err";
-    then
-        if ! diff --unified "$FILE" "$FILE.temp" > "$FILE.diff"; then
+    if jq . "$FILE" >"$FILE.temp" 2>"$FILE.err"; then
+        if ! diff --unified "$FILE" "$FILE.temp" >"$FILE.diff"; then
             EXIT_CODE=1
             if [ "$1" == "--diff" ]; then
-                 cat "$FILE.diff"
+                cat "$FILE.diff"
             elif [ "$1" == "--apply" ]; then
                 cp "$FILE.temp" "$FILE"
             else
