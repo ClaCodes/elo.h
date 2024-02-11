@@ -1,13 +1,13 @@
 ---
-name: 'jq_format'
+name: 'shfmt'
 description:
-  'Checks formatting of .json files with jq'
+  'Checks formatting of shell scripts with shfmt'
 runs:
   using: 'composite'
   steps:
-    - run: sudo apt-get install jq -y
+    - run: sudo apt-get install shfmt -y
       shell: bash
     - run: echo "::add-matcher::.github/matchers/fmt.json"
       shell: bash
-    - run: ./scripts/jq_format.sh
+    - run: ./scripts/shfmt.sh
       shell: bash

@@ -1,3 +1,4 @@
 gitlint
 gitspell
 shellcheck
+shfmt
