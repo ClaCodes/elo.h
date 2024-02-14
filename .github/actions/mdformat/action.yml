@@ -1,0 +1,12 @@
+---
+name: mdformat
+description: Checks CommonMark formatting of md files with mdformat
+runs:
+  using: composite
+  steps:
+    - run: pip install mdformat
+      shell: bash
+    - run: echo "::add-matcher::.github/matchers/fmt.json"
+      shell: bash
+    - run: ./scripts/mdformat.sh
+      shell: bash
