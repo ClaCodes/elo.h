@@ -60,3 +60,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/yamlfix
+  mdformat:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/mdformat
