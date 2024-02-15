@@ -1,9 +1,8 @@
 ---
-name: 'yamllint'
-description:
-  'Lints all yaml files in repo'
+name: yamllint
+description: Lints all yaml files in repo
 runs:
-  using: 'composite'
+  using: composite
   steps:
     - run: pip install yamllint
       shell: bash

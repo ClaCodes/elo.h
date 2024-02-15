@@ -1,9 +1,8 @@
 ---
-name: 'cspell'
-description:
-  'Checks spelling of all files in repo'
+name: cspell
+description: Checks spelling of all files in repo
 runs:
-  using: 'composite'
+  using: composite
   steps:
     - run: sudo npm install -g cspell@latest
       shell: bash

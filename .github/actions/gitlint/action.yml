@@ -1,13 +1,13 @@
 ---
-name: 'gitlint'
-description:
-  'Lints the commit messages of the branch that is currently checked out'
+name: gitlint
+description: Lints the commit messages of the branch that is currently checked
+  out
 outputs:
   diagnostic:
-    description: 'Diagnostic text for gitlint'
+    description: Diagnostic text for gitlint
     value: ${{ steps.gitlint-step.outputs.diagnostic }}
 runs:
-  using: 'composite'
+  using: composite
   steps:
     - run: pip install gitlint
       shell: bash
