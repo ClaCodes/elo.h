@@ -2,3 +2,4 @@ gitlint
 gitspell
 shellcheck
 shfmt
+yamlfix

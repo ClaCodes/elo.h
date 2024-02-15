@@ -55,3 +55,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: ./.github/actions/shfmt
+  yamlfix:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ./.github/actions/yamlfix

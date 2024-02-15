@@ -1,0 +1,12 @@
+---
+name: yamlfix
+description: Checks formatting of yaml files with yamlfix
+runs:
+  using: composite
+  steps:
+    - run: pip install yamlfix
+      shell: bash
+    - run: echo "::add-matcher::.github/matchers/fmt.json"
+      shell: bash
+    - run: ./scripts/yamlfix.sh
+      shell: bash
