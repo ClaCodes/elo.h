@@ -25,6 +25,7 @@ jobs:
           printf ${{ toJSON(steps.gitspell-step.outputs.diagnostic) }}
           >> $GITHUB_STEP_SUMMARY
         if: always()
+
   yamllint:
     runs-on: ubuntu-latest
     steps:

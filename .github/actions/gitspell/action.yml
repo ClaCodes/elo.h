@@ -1,6 +1,6 @@
 ---
 name: gitspell
-description: Checks spelling of all commit messages
+description: 'Checks spelling of all commit messages'
 outputs:
   diagnostic:
     description: Diagnostic text for gitspell

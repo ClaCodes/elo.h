@@ -2,7 +2,7 @@
 name: jq_valid
 description: Checks validity of .json files with jq
 runs:
-  using: composite
+  using:     composite
   steps:
     - run: sudo apt-get install jq -y
       shell: bash
