@@ -1,9 +1,8 @@
 ---
-name: 'shellcheck'
-description:
-  'Checks all shell scripts in repo'
+name: shellcheck
+description: Checks all shell scripts in repo
 runs:
-  using: 'composite'
+  using: composite
   steps:
     - run: sudo apt-get install shellcheck -y
       shell: bash

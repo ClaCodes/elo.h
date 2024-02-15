@@ -1,9 +1,8 @@
 ---
-name: 'shfmt'
-description:
-  'Checks formatting of shell scripts with shfmt'
+name: shfmt
+description: Checks formatting of shell scripts with shfmt
 runs:
-  using: 'composite'
+  using: composite
   steps:
     - run: sudo apt-get install shfmt -y
       shell: bash

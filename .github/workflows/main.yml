@@ -1,6 +1,5 @@
 ---
 on: push  # yamllint disable-line rule:truthy
-
 jobs:
   gitlint:
     runs-on: ubuntu-latest
