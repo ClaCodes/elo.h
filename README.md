@@ -4,6 +4,6 @@ A simple library to compute [elo ratings](.https://en.wikipedia.org/wiki/Elo_rat
 
 # Goals
 
-- single header in style of [stb](https://github.com/nothings/stb)
-- well tested, maybe additional examples
-- C and C++ interfaces
+1. single header in style of [stb](https://github.com/nothings/stb)
+2. well tested, maybe additional examples
+3. C and C++ interfaces
