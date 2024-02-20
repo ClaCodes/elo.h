@@ -1,16 +1,16 @@
 {
-  "problemMatcher": [
-    {
-      "owner": "jq_valid",
-      "pattern": [
+    "problemMatcher": [
         {
-          "regexp": "^(.+);;(.+) at line (\\d+), column (\\d+)$",
-          "file": 1,
-          "message": 2,
-          "line": 3,
-          "column": 4
+            "owner": "jq_valid",
+            "pattern": [
+                {
+                    "regexp": "^(.+);;(.+) at line (\\d+), column (\\d+)$",
+                    "file": 1,
+                    "message": 2,
+                    "line": 3,
+                    "column": 4
+                }
+            ]
         }
-      ]
-    }
-  ]
+    ]
 }
